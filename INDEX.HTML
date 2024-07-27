@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" value="+998" pattern="\+998\d{9}" title="Phone number must start with +998 and contain exactly 9 digits" required>
+
+            <label for="passport">Passport:</label>
+            <input type="text" id="passport" name="passport" pattern="^[A-Z]{2}\d{1,7}$" title="Passport must start with exactly 2 uppercase letters followed by up to 7 digits" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <div id="message"></div>
+    </div>
+</body>
+</html>
